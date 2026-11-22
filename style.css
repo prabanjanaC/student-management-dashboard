@@ -1,0 +1,401 @@
+
+/* General Styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f3f6fc;
+    color: #26344d;
+    min-height: 100vh;
+}
+
+.container {
+    width: 92%;
+    max-width: 1250px;
+    margin: 40px auto;
+}
+
+/* Header */
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 32px;
+    color: #1e3a5f;
+    margin-bottom: 8px;
+}
+
+header p {
+    color: #718096;
+    font-size: 15px;
+}
+
+/* Navigation */
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.nav-btn {
+    padding: 13px 25px;
+    border: 1px solid #d6e0ee;
+    background: white;
+    color: #315477;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    background: #eaf2ff;
+}
+
+.nav-btn.active {
+    background: #2864b4;
+    color: white;
+    border-color: #2864b4;
+}
+
+/* Main Section */
+
+.section {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(31, 55, 90, 0.07);
+}
+
+.section-heading {
+    margin-bottom: 25px;
+}
+
+.section-heading h2 {
+    color: #1e3a5f;
+    font-size: 23px;
+    margin-bottom: 7px;
+}
+
+.section-heading p {
+    color: #8491a5;
+    font-size: 14px;
+}
+
+/* Form */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #344967;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #d8e0eb;
+    border-radius: 7px;
+    font-size: 14px;
+    outline: none;
+    background: #fff;
+    color: #344967;
+    transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #3979cb;
+    box-shadow: 0 0 0 3px rgba(57, 121, 203, 0.1);
+}
+
+.form-group input::placeholder {
+    color: #a0aabc;
+}
+
+/* Form Buttons */
+
+.form-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.submit-btn,
+.cancel-btn {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn {
+    background: #2864b4;
+    color: white;
+}
+
+.submit-btn:hover {
+    background: #1d4e91;
+}
+
+.cancel-btn {
+    background: #e8edf4;
+    color: #344967;
+}
+
+.cancel-btn:hover {
+    background: #d7e0eb;
+}
+
+/* Search and Filter */
+
+.filter-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 22px;
+}
+
+.filter-container input,
+.filter-container select {
+    padding: 12px 15px;
+    border: 1px solid #d8e0eb;
+    border-radius: 7px;
+    font-size: 14px;
+    outline: none;
+    background: white;
+    color: #344967;
+}
+
+.filter-container input {
+    flex: 1;
+}
+
+.filter-container input:focus,
+.filter-container select:focus {
+    border-color: #3979cb;
+}
+
+/* Student Table */
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 850px;
+}
+
+thead {
+    background: #edf3fb;
+}
+
+th {
+    color: #315477;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 16px 12px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+td {
+    padding: 15px 12px;
+    border-bottom: 1px solid #edf0f5;
+    font-size: 13px;
+    color: #53647c;
+}
+
+tbody tr:hover {
+    background: #f8faff;
+}
+
+/* Action Buttons */
+
+.action-btn {
+    border: none;
+    padding: 7px;
+    margin-right: 5px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    background: transparent;
+}
+
+.edit-btn {
+    color: #2864b4;
+}
+
+.edit-btn:hover {
+    background: #e6efff;
+}
+
+.delete-btn {
+    color: #dc4545;
+}
+
+.delete-btn:hover {
+    background: #fff0f0;
+}
+
+/* Student Count */
+
+.student-count {
+    margin-top: 18px;
+    color: #718096;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Empty Table Message */
+
+.empty-message {
+    text-align: center;
+    padding: 30px;
+    color: #8a97a9;
+}
+
+
+/* Email Verification */
+
+.email-verification {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.email-verification input {
+    flex: 1;
+    min-width: 0;
+}
+
+.email-verification button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2864b4;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 0.3s ease;
+}
+
+.email-verification button:hover {
+    background-color: #1d4e91;
+}
+
+.email-verification button:disabled {
+    background-color: #16a34a;
+    cursor: not-allowed;
+}
+
+.otp-message {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #2864b4;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 480px) {
+    .email-verification {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .email-verification button {
+        width: 100%;
+    }
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+
+    .container {
+        width: 95%;
+        margin: 25px auto;
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    .section {
+        padding: 20px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .navigation {
+        flex-direction: column;
+    }
+
+    .nav-btn {
+        width: 100%;
+    }
+
+    .filter-container {
+        flex-direction: column;
+    }
+
+    .filter-container input,
+    .filter-container select {
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+
+    header h1 {
+        font-size: 21px;
+    }
+
+    .section-heading h2 {
+        font-size: 20px;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .submit-btn,
+    .cancel-btn {
+        width: 100%;
+    }
+}

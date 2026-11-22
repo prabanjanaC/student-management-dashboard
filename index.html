@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <h1>Student Management System</h1>
+        <p>Manage student information efficiently</p>
+      </header>
+
+      <!-- Navigation Buttons -->
+      <nav class="navigation">
+        <button id="registrationBtn" class="nav-btn active">
+          Student Registration Form
+        </button>
+
+        <button id="listBtn" class="nav-btn">Student List</button>
+      </nav>
+
+      <main>
+        <!-- Student Registration Section -->
+        <section id="registrationSection" class="section">
+          <div class="section-heading">
+            <h2 id="formTitle">Student Registration Form</h2>
+            <p>Enter the student details below</p>
+          </div>
+
+          <form id="studentForm">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="studentName">Student Name</label>
+                <input
+                  type="text"
+                  id="studentName"
+                  placeholder="Enter student name"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="registerNumber">Register Number</label>
+                <input
+                  type="text"
+                  id="registerNumber"
+                  placeholder="Enter register number"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <div class="email-verification">
+                  <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email address"
+                    required
+                  />
+
+                  <button type="button" id="verifyEmailBtn">
+                    Verify Email
+                  </button>
+                </div>
+              </div>
+
+              <!-- OTP Verification -->
+              <div id="otpSection" class="form-group" hidden>
+                <label for="otpInput">Enter Email OTP</label>
+
+                <div class="email-verification">
+                  <input
+                    type="text"
+                    id="otpInput"
+                    placeholder="Enter 6-digit OTP"
+                    maxlength="6"
+                    inputmode="numeric"
+                  />
+
+                  <button type="button" id="verifyOtpBtn">Verify OTP</button>
+                </div>
+
+                <p id="otpMessage" class="otp-message"></p>
+              </div>
+
+              <div class="form-group">
+                <label for="department">Department</label>
+                <select id="department" required>
+                  <option value="">Select Department</option>
+                  <option value="CSE">Computer Science (CSE)</option>
+                  <option value="IT">Information Technology (IT)</option>
+                  <option value="ECE">Electronics (ECE)</option>
+                  <option value="EEE">Electrical (EEE)</option>
+                  <option value="MECH">Mechanical (MECH)</option>
+                  <option value="CIVIL">Civil (CIVIL)</option>
+                  <option value="AI & DS">AI & Data Science</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="year">Year</label>
+                <select id="year" required>
+                  <option value="">Select Year</option>
+                  <option value="1st Year">1st Year</option>
+                  <option value="2nd Year">2nd Year</option>
+                  <option value="3rd Year">3rd Year</option>
+                  <option value="4th Year">4th Year</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  placeholder="Enter 10-digit phone number"
+                  pattern="[0-9]{10}"
+                  maxlength="10"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" id="submitBtn" class="submit-btn">
+                Submit
+              </button>
+
+              <button type="button" id="cancelBtn" class="cancel-btn" hidden>
+                Cancel
+              </button>
+            </div>
+          </form>
+        </section>
+
+        <!-- Student List Section -->
+        <section id="listSection" class="section" hidden>
+          <div class="section-heading">
+            <h2>Student List</h2>
+            <p>View and manage registered students</p>
+          </div>
+
+          <!-- Search and Filter -->
+          <div class="filter-container">
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Search by student name..."
+            />
+
+            <select id="departmentFilter">
+              <option value="">All Departments</option>
+              <option value="CSE">CSE</option>
+              <option value="IT">IT</option>
+              <option value="ECE">ECE</option>
+              <option value="EEE">EEE</option>
+              <option value="MECH">MECH</option>
+              <option value="CIVIL">CIVIL</option>
+              <option value="AI & DS">AI & DS</option>
+            </select>
+          </div>
+
+          <!-- Student Table -->
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>S.No</th>
+                  <th>Student Name</th>
+                  <th>Register Number</th>
+                  <th>Email</th>
+                  <th>Department</th>
+                  <th>Year</th>
+                  <th>Phone</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+
+              <tbody id="studentTableBody">
+                <!-- Student records appear here -->
+              </tbody>
+            </table>
+          </div>
+
+          <p id="studentCount" class="student-count"></p>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
